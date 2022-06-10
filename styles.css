@@ -35,8 +35,9 @@ body {
 .shape {
   position: fixed;
   z-index: -1;
-  font-size: 24px;
+  font-size: 28px;
   color: #3891a6;
+  filter: blur(1px);
 }
 
 .shape-0 {
@@ -105,7 +106,7 @@ nav ul {
 }
 
 .hero {
-  height: 900px;
+  height: 880px;
   max-width: 80%;
   margin: 20px auto;
 }
@@ -198,8 +199,8 @@ nav ul {
   border-radius: 45%;
   display: flex;
   justify-content: center;
-  margin-bottom: -230px;
-  margin-top: 230px;
+  margin-bottom: -200px;
+  margin-top: 200px;
 }
 
 .touch {
@@ -233,7 +234,7 @@ nav ul {
 }
 
 #skills h2 {
-  font-size: 60px;
+  font-size: 62px;
   text-align: center;
 }
 
@@ -246,6 +247,7 @@ nav ul {
 figure img {
   width: 200px;
   margin: 20px;
+  transition: all 0.2s ease-in-out;
 }
 
 figure img:hover {
@@ -255,4 +257,14 @@ figure img:hover {
 
 figure p {
   font-size: 24px;
+}
+
+#projects {
+  margin-top: 70px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 62px;
+  text-align: center;
 }
