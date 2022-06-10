@@ -17,21 +17,29 @@
   <body>
     <nav class="nav">
       <div class="container">
-        <a class="logo" href="/index.html"
-          ><img src="/img/Logo.png" alt="Logo"
+        <a class="logo" href="index.html"
+          ><img src="img/Logo.png" alt="Logo"
         /></a>
         <ul>
-          <li><a href="#" class="active">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><i class="fa-solid fa-circle-half-stroke theme"></i></li>
         </ul>
       </div>
     </nav>
 
-    <div class="hero">
+    <i class="fa-regular fa-lightbulb shape shape-0"></i>
+    <i class="fa-regular fa-square shape shape-1"></i>
+    <i class="fa-regular fa-keyboard shape shape-2"></i>
+    <i class="fa-regular fa-folder shape shape-3"></i>
+    <i class="fa-regular fa-file-code shape shape-4"></i>
+    <i class="fa-regular fa-circle shape shape-5"></i>
+
+    <section id="home" class="hero" onmousemove="moveBackground(event)">
       <div class="container">
-        <h3>Hello<span class="dot">.</span></h3>
+        <h3>Hello<span class="dot">!</span></h3>
         <h1>I am Norberto<span class="dot">.</span></h1>
         <div class="text-change">
           <div class="animation">
@@ -40,7 +48,55 @@
             <h2>Life-long learner<span class="dot">.</span></h2>
           </div>
         </div>
+        <div class="circles">
+        <a class="circle-hero" href="https://github.com/Norbjz" target="blank_">
+            <i class="fa-brands fa-github"></i></a>
+        <a class="circle-hero" href="https://www.linkedin.com/in/norb/" target="blank_">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
       </div>
+      <div class="mouse">
+        <div class="touch"></div>
     </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills<span class="dot">.</span></h2>
+        <div class="skill-imgs">        
+            <figure>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png">
+            <p>HTML</p>
+        </figure>    
+        <figure>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png">
+            <p>CSS</p>
+        </figure> 
+        <figure>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png">
+            <p>JAVASCRIPT</p>
+        </figure> </div>
+        <figure>
+            <img src="img/git-icon.png">
+            <p>GIT</p>
+        </figure> </div>
+
+
+ 
+
+
+        </div>
+
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects<span class="dot">.</span></h2>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Conctact<span class="dot">.</span></h2>
+    </section>
+
+    
+<script src="main.js"></script>
   </body>
 </html>

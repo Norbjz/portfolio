@@ -22,6 +22,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  background-color: #242424;
 }
 
 .nav .container {
@@ -29,7 +30,38 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  transition: all 0.03s ease-in-out;
+}
+
+.shape {
+  position: fixed;
+  z-index: -1;
+  font-size: 24px;
+  color: #3891a6;
+}
+
+.shape-0 {
+  top: 15vh;
+  left: 11vw;
+}
+.shape-1 {
+  top: 20vh;
+  left: 40vw;
+}
+.shape-2 {
+  top: 17vh;
+  left: 77vw;
+}
+.shape-3 {
+  top: 70vh;
+  left: 7vw;
+}
+.shape-4 {
+  top: 58vh;
+  left: 48vw;
+}
+.shape-5 {
+  top: 68vh;
+  left: 82vw;
 }
 
 nav a img {
@@ -53,10 +85,18 @@ nav ul {
 .nav a {
   text-decoration: none;
   color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav li {
   padding: 0 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav a.active,
+.nav a:hover,
+.nav li:hover {
+  color: #3891a6;
 }
 
 .container {
@@ -67,7 +107,7 @@ nav ul {
 .hero {
   height: 900px;
   max-width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .hero .container {
@@ -79,7 +119,7 @@ nav ul {
 }
 
 .hero h1 {
-  font-size: 90px;
+  font-size: 94px;
 }
 
 .hero h3 {
@@ -91,7 +131,7 @@ nav ul {
   margin-top: 20px;
 }
 
-.hero .dot {
+.dot {
   color: #3891a6;
 }
 
@@ -127,4 +167,92 @@ nav ul {
   100% {
     margin-top: -20px;
   }
+}
+
+.circles {
+  display: flex;
+  margin: 15px 0;
+}
+
+.circle-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.fa-brands {
+  color: #242424;
+  font-size: 22px;
+}
+
+.mouse {
+  align-self: center;
+  width: 25px;
+  height: 40px;
+  border: solid 2px white;
+  border-radius: 45%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -230px;
+  margin-top: 230px;
+}
+
+.touch {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+  margin-top: 5px;
+
+  animation: custom-scroll 4s infinite ease;
+}
+
+@keyframes custom-scroll {
+  0% {
+    margin-top: 5px;
+  }
+
+  50%,
+  60% {
+    margin-top: 20px;
+  }
+
+  100% {
+    margin-top: 5px;
+  }
+}
+
+#skills {
+  margin-top: 70px;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 60px;
+  text-align: center;
+}
+
+.skill-imgs {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+figure img {
+  width: 200px;
+  margin: 20px;
+}
+
+figure img:hover {
+  transform: scale(0.9);
+  transition: all 0.2s ease-in-out;
+}
+
+figure p {
+  font-size: 24px;
 }
