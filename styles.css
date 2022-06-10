@@ -6,3 +6,125 @@
   padding: 0;
   font-family: 'Rubik', sans-serif;
 }
+
+body {
+  background-color: #242424;
+  color: white;
+  height: 100vh;
+}
+
+.logo {
+  filter: brightness(0) invert(1);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.03s ease-in-out;
+}
+
+nav a img {
+  width: 70px;
+  margin-top: -15px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+  font-size: 22px;
+}
+
+.theme {
+  cursor: pointer;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav li {
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 900px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hero .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 90px;
+}
+
+.hero h3 {
+  font-size: 62px;
+}
+
+.hero h2 {
+  font-size: 75px;
+  margin-top: 20px;
+}
+
+.hero .dot {
+  color: #3891a6;
+}
+
+.text-change {
+  height: 100px;
+  overflow: hidden;
+  color: #c84630;
+}
+
+.text-change .animation {
+  animation: text-animation 18s ease infinite;
+  animation-delay: 2s;
+  margin-top: -20px;
+}
+
+@keyframes text-animation {
+  0% {
+    margin-top: -20px;
+  }
+
+  25% {
+    margin-top: -128px;
+  }
+
+  50% {
+    margin-top: -236px;
+  }
+
+  75% {
+    margin-top: -128px;
+  }
+
+  100% {
+    margin-top: -20px;
+  }
+}
