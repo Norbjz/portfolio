@@ -530,6 +530,11 @@ figure p {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    margin-top: 80px;
+    max-width: 100%;
+  }
+
   nav .drop-menu {
     display: block;
     font-size: 45px;
@@ -570,7 +575,7 @@ figure p {
   }
 
   .hero h1 {
-    font-size: 68px;
+    font-size: 64px;
   }
 
   .hero h3 {
@@ -615,8 +620,13 @@ figure p {
     }
   }
 
+  .mouse,
+  .touch {
+    display: none;
+  }
+
   .title {
-    font-size: 64px;
+    font-size: 58px;
     margin-top: 20px;
   }
 
@@ -625,12 +635,12 @@ figure p {
   }
 
   .card {
-    width: 380px;
-    height: 200px;
+    width: 300px;
+    height: 180px;
   }
 
   .card:hover:after {
-    height: 380px;
+    height: 300px;
   }
 
   .card-text {
@@ -648,6 +658,11 @@ figure p {
 
   .card:hover .card-text {
     opacity: 1;
-    transform: translateY(22%);
+    transform: translateY(24%);
+  }
+
+  .card .card-button {
+    padding: 4px 10px;
+    font-size: 14px;
   }
 }
