@@ -531,7 +531,7 @@ figure p {
 
 @media (max-width: 480px) {
   .hero {
-    margin-top: 80px;
+    margin-top: 60px;
     max-width: 100%;
   }
 
