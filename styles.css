@@ -7,6 +7,10 @@
   font-family: 'Rubik', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #242424;
   color: white;
@@ -23,6 +27,8 @@ body {
   left: 0;
   right: 0;
   background-color: #242424;
+  z-index: 2;
+  height: 80px;
 }
 
 .nav .container {
@@ -37,7 +43,7 @@ body {
   z-index: -1;
   font-size: 28px;
   color: #3891a6;
-  filter: blur(1px);
+  filter: blur(1.2px);
 }
 
 .shape-0 {
@@ -53,15 +59,15 @@ body {
   left: 77vw;
 }
 .shape-3 {
-  top: 70vh;
+  top: 78vh;
   left: 7vw;
 }
 .shape-4 {
-  top: 58vh;
-  left: 48vw;
+  top: 64vh;
+  left: 58vw;
 }
 .shape-5 {
-  top: 68vh;
+  top: 72vh;
   left: 82vw;
 }
 
@@ -86,18 +92,38 @@ nav ul {
 .nav a {
   text-decoration: none;
   color: white;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav li {
   padding: 0 15px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav li a {
+  position: relative;
 }
 
 .nav a.active,
 .nav a:hover,
 .nav li:hover {
   color: #3891a6;
+}
+
+.nav li a:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  right: 0;
+  width: 0;
+  transition: all 0.3s ease;
+  background-color: #3891a6;
+}
+
+.nav a:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 .container {
@@ -108,7 +134,7 @@ nav ul {
 .hero {
   height: 880px;
   max-width: 80%;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 .hero .container {
@@ -210,32 +236,33 @@ nav ul {
   background: white;
   margin-top: 5px;
 
-  animation: custom-scroll 4s infinite ease;
+  animation: custom-scroll 2.5s infinite linear;
 }
 
 @keyframes custom-scroll {
-  0% {
+  0%,
+  10% {
     margin-top: 5px;
   }
 
-  50%,
-  60% {
+  50% {
     margin-top: 20px;
   }
 
+  90%,
   100% {
     margin-top: 5px;
   }
 }
 
 #skills {
-  margin-top: 70px;
   text-align: center;
 }
 
-#skills h2 {
+.title {
   font-size: 62px;
   text-align: center;
+  padding-top: 110px;
 }
 
 .skill-imgs {
@@ -260,11 +287,144 @@ figure p {
 }
 
 #projects {
-  margin-top: 70px;
   text-align: center;
 }
 
-#projects h2 {
-  font-size: 62px;
-  text-align: center;
+.card {
+  width: 900px;
+  height: 500px;
+  margin: 80px auto;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 60px -4px black;
+}
+
+.card-img {
+  z-index: -1;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card:after {
+  width: 100%;
+  content: '';
+  left: 0px;
+  bottom: 0px;
+  height: 0px;
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(0.95);
+}
+
+.card:hover .card-img {
+  filter: blur(0.9px);
+}
+
+.card:hover:after {
+  height: 500px;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+  padding-bottom: 30px;
+  transition: all 0.3s ease;
+  z-index: 1;
+  text-align: start;
+  opacity: 0;
+  padding: 40px;
+  padding-bottom: 80px;
+  transform: translateY(100%);
+  font-size: 30px;
+}
+
+.card:hover .card-text {
+  opacity: 1;
+  transform: translateY(-20%);
+}
+
+.card .card-button {
+  padding: 7px 17px;
+  border-radius: 12px;
+  background: transparent;
+  border: solid 2px #fff;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  outline: none;
+}
+
+.card-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.footer {
+  margin-top: 200px;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #242424;
+}
+
+.logo-footer {
+  filter: brightness(0) invert(1);
+  width: 66px;
+}
+
+.footer ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  font-size: 18px;
+}
+
+.footer ul li {
+  margin: 8px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer li a {
+  position: relative;
+}
+
+.footer li a:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  right: 0;
+  width: 0;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.footer a:hover:after {
+  left: 0;
+  width: 100%;
 }
