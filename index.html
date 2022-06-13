@@ -14,21 +14,26 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
+  <body class="white-theme">
     <nav class="nav">
       <div class="container">
         <a class="logo" href="index.html"
           ><img src="img/Logo.png" alt="Logo"
         /></a>
         <ul>
-        <li><a href="#home" class="active">Home</a></li>
+        <li><a onClick="window.scrollTo(0, 0)" href="#" class="active">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><i class="fa-solid fa-circle-half-stroke theme"></i></li>
+          <li><a href="#" onclick="show()">Contact</a></li>
+          <li><i class="fa-solid fa-circle-half-stroke theme" onclick="toggleTheme()"></i></li>
         </ul>
       </div>
     </nav>
+
+<!--     <section id="contact" class="modal">
+      <div class="modalContent"><p>modal contacto</p></div>
+        <i class="fa-solid fa-xmark" onclick="hide()"></i>
+    </section> -->
 
     <i class="fa-regular fa-lightbulb shape shape-0"></i>
     <i class="fa-regular fa-square shape shape-1"></i>
@@ -37,7 +42,7 @@
     <i class="fa-regular fa-file-code shape shape-4"></i>
     <i class="fa-regular fa-circle shape shape-5"></i>
 
-    <section id="home" class="hero" onmousemove="moveBackground(event)">
+    <section class="hero" onmousemove="moveBackground(event)">
       <div class="container">
         <h3>Hello<span class="dot">!</span></h3>
         <h1>I am Norberto<span class="dot">.</span></h1>
@@ -60,7 +65,7 @@
     </div>
     </section>
 
-    <section id="skills" class="container">
+    <section id="skills" class="container" event>
         <h2 class="title">Skills<span class="dot">.</span></h2>
         <div class="skill-imgs">        
         <figure>
@@ -99,34 +104,34 @@
 <div class="card">
   <img class="card-img" src="img/nogara.png" alt="">
   <div class="card-text">
-    <h4>Ejercicios de programación básica</h4>
+    <h4>Nogara Academy Projects</h4>
+    <br>
     <p>
-      Primera tarea del curso de JavaScript de Nogara donde utilizamos
-      condicionales "if else".
+      Projects I am doing while taking the Nogara Academy JavaScript course. This projects include from basic programming excersices to coding the entire logic behind a calculator.
     </p>
-    <button class="card-button">
-      Ir a la página
-      </button>
-      <button class="card-button">
-      Ver código
-      </button>
+    <a href="https://github.com/Norbjz/nogara" target="_blank"><button class="card-button">
+      Go to page
+      </button></a>
+      <a href="https://github.com/Norbjz/nogara" target="_blank"><button class="card-button">
+      See code
+      </button></a>
     </div>
 </div>
 
 <div class="card">
-  <img class="card-img" src="img/nogara.png" alt="">
+  <img class="card-img" src="img/memorama.png" alt="">
   <div class="card-text">
-    <h4>Ejercicios de programación básica</h4>
+    <h4>Pokémon memory game</h4>
+    <br>
     <p>
-      Primera tarea del curso de JavaScript de Nogara donde utilizamos
-      condicionales "if else".
+      Final project for the Dev.f course. The challenge here was programming the logic behind a memory game using only JavaScript.
     </p>
-<button class="card-button">
-Ir a la página
-</button>
-<button class="card-button">
-Ver código
-</button>
+<a href="https://norbjz.github.io/memorama-pokemon/" target="_blank"><button class="card-button">
+Go to page
+</button></a>
+<a href="https://github.com/Norbjz/memorama-pokemon" target="_blank"><button class="card-button">
+See code
+</button></a>
 </div>
         
     </section>
@@ -136,9 +141,9 @@ Ver código
     />
 <ul>
   <li><a href="https://github.com/Norbjz" target="blank_">GitHub</a></li>
-  <li><a href="https://www.linkedin.com/in/norb/" target="blank_">LinkedIn</a></li>
+  <li><a href="https://www.linkedin.com/in/norb/" target="_blank">LinkedIn</a></li>
   <li><a href="#">Contact</a></li>
-  <li> <a href="#home">To top</a></li>
+  <li> <a onClick="window.scrollTo(0, 0)" href="#">Back to top</a></li>
 </ul>
     </footer>
     

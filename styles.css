@@ -14,7 +14,24 @@ html {
 body {
   background-color: #242424;
   color: white;
-  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.white-theme .logo {
+  filter: none;
+}
+
+.white-theme,
+.white-theme nav,
+.white-theme nav a {
+  background-color: #fff;
+  color: #242424;
+}
+
+.white-theme .circle-hero,
+.white-theme .fa-brands {
+  background-color: #242424;
+  color: #fff;
 }
 
 .logo {
@@ -29,6 +46,7 @@ body {
   background-color: #242424;
   z-index: 2;
   height: 80px;
+  transition: all 0.3s ease;
 }
 
 .nav .container {
@@ -92,12 +110,12 @@ nav ul {
 .nav a {
   text-decoration: none;
   color: white;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .nav li {
   padding: 0 15px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 .nav li a {
@@ -126,8 +144,31 @@ nav ul {
   width: 100%;
 }
 
+/* .modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease;
+}
+
+.modalContent {
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 20% auto 0% auto;
+  padding: 15px;
+  border: 1px solid #111;
+  text-align: center;
+  width: 40%;
+  transition: all 0.3s ease;
+} */
+
 .container {
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -147,15 +188,18 @@ nav ul {
 
 .hero h1 {
   font-size: 94px;
+  animation: fade-up 0.8s 0.3s backwards;
 }
 
 .hero h3 {
   font-size: 62px;
+  animation: fade-up 0.8s 0.3s backwards;
 }
 
 .hero h2 {
   font-size: 75px;
   margin-top: 20px;
+  animation: fade-up 0.8s 0.3s backwards;
 }
 
 .dot {
@@ -166,6 +210,7 @@ nav ul {
   height: 100px;
   overflow: hidden;
   color: #c84630;
+  animation: fade-up 0.8s 0.3s backwards;
 }
 
 .text-change .animation {
@@ -199,6 +244,18 @@ nav ul {
 .circles {
   display: flex;
   margin: 15px 0;
+  animation: fade-up 0.8s 0.3s backwards;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .circle-hero {
@@ -228,6 +285,9 @@ nav ul {
   margin-bottom: -200px;
   margin-top: 200px;
 }
+.white-theme .mouse {
+  border: solid 2px #242424;
+}
 
 .touch {
   width: 4px;
@@ -237,6 +297,10 @@ nav ul {
   margin-top: 5px;
 
   animation: custom-scroll 2.5s infinite linear;
+}
+
+.white-theme .touch {
+  background: #242424;
 }
 
 @keyframes custom-scroll {
@@ -321,7 +385,7 @@ figure p {
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 0.9) 100%
   );
   transition: all 0.3s ease;
 }
@@ -331,7 +395,7 @@ figure p {
 }
 
 .card:hover .card-img {
-  filter: blur(0.9px);
+  filter: blur(0.95px);
 }
 
 .card:hover:after {
@@ -351,11 +415,16 @@ figure p {
   padding-bottom: 80px;
   transform: translateY(100%);
   font-size: 30px;
+  color: #fff;
+}
+
+.card-text h4 {
+  font-size: 35px;
 }
 
 .card:hover .card-text {
   opacity: 1;
-  transform: translateY(-20%);
+  transform: translateY(-5%);
 }
 
 .card .card-button {
@@ -427,4 +496,50 @@ figure p {
 .footer a:hover:after {
   left: 0;
   width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .shape {
+    opacity: 0;
+  }
+
+  * {
+    border: solid red 2px;
+  }
+
+  nav {
+    width: 90%;
+  }
+
+  .hero {
+    height: 700px;
+  }
+
+  .skill-imgs {
+    flex-direction: column;
+  }
+
+  figure img {
+    width: 220px;
+  }
+
+  .card {
+    width: 690px;
+    height: 400px;
+  }
+
+  .card:hover .card-text {
+    transform: translateY(10%);
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .card {
+    width: 320px;
+    height: 180px;
+  }
 }
