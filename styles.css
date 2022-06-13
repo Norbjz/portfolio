@@ -144,6 +144,10 @@ nav ul {
   width: 100%;
 }
 
+nav .drop-menu {
+  display: none;
+}
+
 /* .modal {
   display: none;
   width: 100%;
@@ -503,14 +507,6 @@ figure p {
     opacity: 0;
   }
 
-  * {
-    border: solid red 2px;
-  }
-
-  nav {
-    width: 90%;
-  }
-
   .hero {
     height: 700px;
   }
@@ -534,12 +530,124 @@ figure p {
 }
 
 @media (max-width: 480px) {
+  nav .drop-menu {
+    display: block;
+    font-size: 45px;
+    margin-top: -15px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .drop {
+    position: fixed;
+    height: 600px;
+  }
+
+  nav.drop .drop-menu {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  .drop ul {
+    display: block;
+    flex-direction: column;
+    text-align: right;
+    position: absolute;
+    margin-top: 550px;
+    right: 30px;
+    background-color: transparent;
+    width: 200px;
+  }
+
+  .drop ul li {
+    margin-top: 40px;
+    font-size: 50px;
+    background-color: transparent;
+  }
+
+  .hero h1 {
+    font-size: 68px;
+  }
+
+  .hero h3 {
+    font-size: 48px;
+  }
+
+  .hero h2 {
+    font-size: 54px;
+    margin-bottom: 50px;
+  }
+
+  .text-change {
+    height: 120px;
+    animation: fade-up 0.8s 0.3s backwards;
+  }
+
+  .text-change .animation {
+    animation: text-animation 18s ease infinite;
+    animation-delay: 2s;
+    margin-top: -20px;
+  }
+
+  @keyframes text-animation {
+    0% {
+      margin-top: -20px;
+    }
+
+    25% {
+      margin-top: -135px;
+    }
+
+    50% {
+      margin-top: -252px;
+    }
+
+    75% {
+      margin-top: -135px;
+    }
+
+    100% {
+      margin-top: -20px;
+    }
+  }
+
   .title {
-    font-size: 24px;
+    font-size: 64px;
+    margin-top: 20px;
+  }
+
+  figure img {
+    width: 180px;
   }
 
   .card {
-    width: 320px;
-    height: 180px;
+    width: 380px;
+    height: 200px;
+  }
+
+  .card:hover:after {
+    height: 380px;
+  }
+
+  .card-text {
+    text-align: center;
+    transform: translateY(53%);
+  }
+
+  .card-text p {
+    display: none;
+  }
+
+  .card-text h4 {
+    font-size: 26px;
+  }
+
+  .card:hover .card-text {
+    opacity: 1;
+    transform: translateY(22%);
   }
 }

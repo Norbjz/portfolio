@@ -32,3 +32,13 @@ function toggleTheme() {
     document.body.classList.remove('white-theme');
   }
 }
+
+function openMenu() {
+  navDrop = document.querySelector('.nav');
+  if (navDrop.className === 'nav') {
+    navDrop.classList.add('drop');
+  } else {
+    navDrop.classList.remove('drop');
+  }
+  console.log(navDrop);
+}
