@@ -1,6 +1,9 @@
 var last_known_scroll = 0;
 var themeToggle = true;
 
+var firstNav = document.getElementById('first');
+firstNav.addEventListener('click', menuRemove);
+
 function moveBackground(e) {
   const shapes = document.querySelectorAll('.shape');
   const x = e.clientX * 0.04;
@@ -40,5 +43,12 @@ function openMenu() {
   } else {
     navDrop.classList.remove('drop');
   }
-  console.log(navDrop);
+}
+
+function menuRemove() {
+  navBar = document.querySelector('.nav');
+
+  if (navBar.classList.contains('drop')) {
+    navBar.classList.remove('drop');
+  }
 }
