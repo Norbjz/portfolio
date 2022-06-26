@@ -1,8 +1,8 @@
 var last_known_scroll = 0;
 var themeToggle = true;
 
-var firstNav = document.getElementById('first');
-firstNav.addEventListener('click', menuRemove);
+/* var firstNav = document.getElementById('first');
+firstNav.addEventListener('click', menuRemove); */
 
 function moveBackground(e) {
   const shapes = document.querySelectorAll('.shape');
@@ -16,16 +16,24 @@ function moveBackground(e) {
   }
 }
 
-/* function show() {
-  document.getElementById('contact').style.display = 'block';
+function contactForm() {
+  show();
+  menuRemove();
+}
 
-  let cosa = document.getElementById('contact');
-  console.log(cosa);
+function show() {
+  document.getElementById('contact').style.visibility = 'visible';
+  document.getElementById('contact').style.opacity = 1;
+  document.querySelector('.nav').style.visibility = 'hidden';
+  document.querySelector('.nav').style.opacity = 0;
 }
 
 function hide() {
-  document.getElementById('contact').style.display = 'none';
-} */
+  document.getElementById('contact').style.visibility = 'hidden';
+  document.getElementById('contact').style.opacity = 0;
+  document.querySelector('.nav').style.visibility = 'visible';
+  document.querySelector('.nav').style.opacity = 1;
+}
 
 function toggleTheme() {
   themeToggle = !themeToggle;
