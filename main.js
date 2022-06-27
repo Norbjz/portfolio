@@ -1,9 +1,6 @@
 var last_known_scroll = 0;
 var themeToggle = true;
 
-/* var firstNav = document.getElementById('first');
-firstNav.addEventListener('click', menuRemove); */
-
 function moveBackground(e) {
   const shapes = document.querySelectorAll('.shape');
   const x = e.clientX * 0.04;
@@ -64,3 +61,26 @@ function menuRemove() {
     navBar.classList.remove('drop');
   }
 }
+
+const btn = document.getElementById('send-btn');
+
+document.getElementById('form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  btn.innerHTML = 'Sending...';
+  console.log(btn);
+
+  const serviceID = 'default_service';
+  const templateID = 'template_bog9fki';
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.innerHTML = 'Send';
+      alert('Email Sent! Thank you!');
+    },
+    (err) => {
+      btn.innerHTML = 'Send';
+      alert(JSON.stringify(err));
+    }
+  );
+});
