@@ -188,6 +188,9 @@ nav .drop-menu {
   border-radius: 20px 0 0 20px;
   background-color: #fff;
   margin-top: 0px;
+  color: #242424;
+  transform: translateY(-200%);
+  transition: transform 1s ease;
 }
 
 .modal-about h2 {
@@ -204,6 +207,7 @@ nav .drop-menu {
 .text-highlight {
   color: #c84630;
 }
+
 .contact-skills {
   display: flex;
   flex-wrap: wrap;
@@ -233,6 +237,79 @@ nav .drop-menu {
   background-color: #242424;
   margin-bottom: 0px;
   position: relative;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+  transform: translateY(200%);
+  transition: transform 1s ease;
+}
+
+.modal-contact h2 {
+  text-align: left;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.modal-contact p {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.form-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  margin: 0 auto 40px auto;
+  width: 400px;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px #fff;
+  background: transparent;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: solid 1px #3891a6;
+  outline: none;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-message {
+  height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: #c84630;
+  border: solid 2px transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  outline: none;
+}
+
+.submit-btn:hover {
+  background: transparent;
+  border: solid 2px #fff;
 }
 
 .fa-xmark {
