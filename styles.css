@@ -688,7 +688,7 @@ figure p {
 
 @media (max-width: 1100px) {
   .modal-about {
-    width: 400px;
+    max-width: 400px;
     height: 600px;
     padding: 60px;
   }
@@ -711,7 +711,7 @@ figure p {
   }
 
   .modal-contact {
-    width: 400px;
+    max-width: 400px;
     height: 600px;
     padding: 60px;
   }
@@ -803,6 +803,11 @@ figure p {
 
   .contact-skills img {
     width: 40px;
+  }
+
+  .contact-skills p {
+    font-size: 12px;
+    margin-top: -10px;
   }
 
   .modal-contact {
