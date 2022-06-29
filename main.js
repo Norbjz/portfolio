@@ -23,6 +23,7 @@ function show() {
   document.getElementById('contact').style.opacity = 1;
   document.querySelector('.nav').style.visibility = 'hidden';
   document.querySelector('.nav').style.opacity = 0;
+  document.querySelector('.hero').style.opacity = 0;
   document.querySelector('.modal-about').style.transform = 'translateY(0%)';
   document.querySelector('.modal-contact').style.transform = 'translateY(0%)';
 }
@@ -32,6 +33,7 @@ function hide() {
   document.getElementById('contact').style.opacity = 0;
   document.querySelector('.nav').style.visibility = 'visible';
   document.querySelector('.nav').style.opacity = 1;
+  document.querySelector('.hero').style.opacity = 1;
   document.querySelector('.modal-about').style.transform = 'translateY(-200%)';
   document.querySelector('.modal-contact').style.transform = 'translateY(200%)';
 }

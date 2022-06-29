@@ -162,7 +162,7 @@ nav .drop-menu {
   transition: all 0.9s ease;
 }
 
-.modalContent {
+.modal-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -336,6 +336,7 @@ textarea:focus::placeholder {
   height: 880px;
   max-width: 80%;
   margin: 40px auto;
+  transition: opacity 0.6s ease;
 }
 
 .hero .container {
@@ -685,6 +686,47 @@ figure p {
   }
 }
 
+@media (max-width: 1100px) {
+  .modal-about {
+    width: 400px;
+    height: 600px;
+    padding: 60px;
+  }
+
+  .modal-about p {
+    font-size: 18px;
+  }
+
+  .contact-skills {
+    margin-top: 5px;
+  }
+
+  .contact-skills p {
+    font-size: 12px;
+    margin-top: -10px;
+  }
+
+  .contact-skills img {
+    width: 50px;
+  }
+
+  .modal-contact {
+    width: 400px;
+    height: 600px;
+    padding: 60px;
+  }
+
+  input,
+  textarea {
+    margin: 0 auto 30px auto;
+    width: 280px;
+  }
+
+  .fa-xmark {
+    font-size: 38px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero {
     max-width: 100%;
@@ -727,6 +769,68 @@ figure p {
     margin-top: 40px;
     font-size: 50px;
     background-color: transparent;
+  }
+
+  .modal {
+    position: absolute;
+    height: 4040px;
+  }
+
+  .modal-content {
+    flex-direction: column-reverse;
+    margin-top: 30px;
+  }
+
+  .modal-about {
+    padding: 40px;
+    width: 330px;
+    height: 550px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .modal-about h2 {
+    font-size: 30px;
+  }
+
+  .modal-about p {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+
+  .contact-skills {
+    margin-top: 5px;
+  }
+
+  .contact-skills img {
+    width: 40px;
+  }
+
+  .modal-contact {
+    width: 330px;
+    height: 600px;
+    border-radius: 20px 20px 0 0;
+    padding: 40px;
+  }
+
+  .modal-contact h2 {
+    font-size: 30px;
+  }
+
+  .modal-contact p {
+    margin-bottom: 20px;
+  }
+
+  input,
+  textarea {
+    width: 250px;
+  }
+
+  .form-message {
+    height: 120px;
+  }
+
+  .fa-xmark {
+    font-size: 36px;
   }
 
   .hero h1 {
