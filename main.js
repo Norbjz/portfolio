@@ -42,8 +42,12 @@ function toggleTheme() {
   themeToggle = !themeToggle;
   if (themeToggle) {
     document.body.classList.add('white-theme');
+    document.getElementsByClassName('theme')[0].classList.remove('fa-sun');
+    document.getElementsByClassName('theme')[0].classList.add('fa-moon');
   } else {
     document.body.classList.remove('white-theme');
+    document.getElementsByClassName('theme')[0].classList.remove('fa-moon');
+    document.getElementsByClassName('theme')[0].classList.add('fa-sun');
   }
 }
 
